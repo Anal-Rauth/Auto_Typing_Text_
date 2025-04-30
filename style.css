@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./sundor_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 16px 32px;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    color: #ffffff;
+    animation: glow 2s infinite alternate;
+    height: 14rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    
+}
+span{
+    color: antiquewhite;
+    padding: 5px;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    display: inline-flex;
+    align-items: center;
+}
+span::after{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: antiquewhite;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7, 0 0 30px #00ffe7;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
